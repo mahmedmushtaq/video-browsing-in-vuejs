@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
        <SearchBar @termChange="onTermChange"/>
         <VideoList :videos="videos"/>
 
@@ -10,7 +10,7 @@
 <script>
     import SearchBar from "./components/SearchBar";
     import VideoList from "./components/VideoList";
-    const youtubeAPIKEY = 'AIzaSyB7ydlY1Gd8TUzZdZ-Mev9HPt8fwDxBg7U';
+    const youtubeAPIKEY = process.env.API_KEY;
     import axios from "axios";
     export default {
         name:'App',

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="m-5 text-center">
         <input @input="onInput"/>
     </div>
 </template>
@@ -16,3 +16,10 @@
 
     }
 </script>
+
+<style scoped>
+    input{
+        width:75%;
+
+    }
+</style>
