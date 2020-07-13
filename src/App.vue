@@ -10,9 +10,7 @@
 <script>
     import SearchBar from "./components/SearchBar";
     import VideoList from "./components/VideoList";
-    const youtubeAPIKEY = process.env.VUE_APP_API_KEY;
 
-    import axios from "axios";
     export default {
         name:'App',
         components:{
@@ -26,17 +24,20 @@
         },
         methods:{
             async onTermChange(searchValue){
-            const response = await  axios.get('https://www.googleapis.com/youtube/v3/search',{
-                 params:{
-                     key:youtubeAPIKEY,
-                     type:'video',
-                     part:'snippet',
-                     q:searchValue,
-                 }
-             })
+
+                // const response = await  axios.get('https://www.googleapis.com/youtube/v3/search',{
+                //     params:{
+                //         key:youtubeAPIKEY,
+                //         type:'video',
+                //         part:'snippet',
+                //         q:searchValue,
+                //     }
+                // })
+                // this.videos = response.data.items;
 
 
-                this.videos = response.data.items;
+                 console.log("seacrch value",searchValue);
+                this.videos = [{id:1,title:'Hello world'},{id:1,title:'Hello world2',}];
 
 
             }

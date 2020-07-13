@@ -1,9 +1,11 @@
 <template>
     <div>
-        <ul>
+        <ul class="list-group">
             <VideoListItem
                     v-for="(video,index) in videos"
-                    :video="video" :key="index">
+                    :video="video" :key="index"
+                    @onClick="videoOnClick"
+            >
 
             </VideoListItem>
         </ul>
@@ -18,6 +20,11 @@
             VideoListItem,
         },
         props:['videos'],
+        methods:{
+            videoOnClick(video){
+                console.log('video is = ',video);
+            }
+        }
 
 
     }
