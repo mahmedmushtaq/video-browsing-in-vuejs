@@ -10,7 +10,8 @@
 <script>
     import SearchBar from "./components/SearchBar";
     import VideoList from "./components/VideoList";
-    const youtubeAPIKEY = process.env.API_KEY;
+    const youtubeAPIKEY = process.env.VUE_APP_API_KEY;
+
     import axios from "axios";
     export default {
         name:'App',
